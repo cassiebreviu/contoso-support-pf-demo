@@ -1,0 +1,68 @@
+id: template_chat_flow
+name: Template Chat Flow
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  chat_history:
+    type: list
+    is_chat_history: true
+  question:
+    type: string
+    is_chat_input: true
+    default: What was in my previous order?
+  customerId:
+    type: string
+    default: "6"
+outputs:
+  answer:
+    type: string
+    reference: ${llm_call.output}
+    is_chat_output: true
+nodes:
+- name: question_embedding
+  type: python
+  source:
+    type: package
+    tool: promptflow.tools.embedding.embedding
+  inputs:
+    connection: ignite-aoai
+    deployment_name: text-embedding-ada-002
+    input: ${inputs.question}
+- name: customer_lookup
+  type: python
+  source:
+    type: code
+    path: customer_lookup.py
+  inputs:
+    customerId: ${inputs.customerId}
+    conn: cosmos-contoso
+- name: retrieve_support_documentation
+  type: python
+  source:
+    type: code
+    path: retrieve_support_documentation.py
+  inputs:
+    question: ${inputs.question}
+    search: contoso-search
+    embedding: ${question_embedding.output}
+    index_name: contoso-trek
+- name: customer_prompt
+  type: prompt
+  source:
+    type: code
+    path: customer_prompt.jinja2
+  inputs:
+    documentation: ${retrieve_support_documentation.output}
+    history: ${inputs.chat_history}
+    customer: ${customer_lookup.output}
+- name: llm_call
+  type: llm
+  source:
+    type: code
+    path: llm_call.jinja2
+  inputs:
+    deployment_name: gpt-35-turbo
+    question: ${customer_prompt.output}
+    prompt_text: ${inputs.question}
+  connection: ignite-aoai
+  api: chat
