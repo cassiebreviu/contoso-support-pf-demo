@@ -25,7 +25,7 @@ nodes:
     type: package
     tool: promptflow.tools.embedding.embedding
   inputs:
-    connection: ignite-aoai
+    connection: contoso-aoai-connection
     deployment_name: text-embedding-ada-002
     input: ${inputs.question}
 - name: customer_lookup
@@ -35,7 +35,7 @@ nodes:
     path: customer_lookup.py
   inputs:
     customerId: ${inputs.customerId}
-    conn: cosmos-contoso
+    conn: contoso-cosmosdb
 - name: retrieve_support_documentation
   type: python
   source:
@@ -45,7 +45,7 @@ nodes:
     question: ${inputs.question}
     search: contoso-search
     embedding: ${question_embedding.output}
-    index_name: contoso-trek
+    index_name: contoso-manuals-index
 - name: customer_prompt
   type: prompt
   source:
@@ -64,5 +64,5 @@ nodes:
     deployment_name: gpt-35-turbo
     question: ${customer_prompt.output}
     prompt_text: ${inputs.question}
-  connection: ignite-aoai
+  connection: contoso-aoai-connection
   api: chat
