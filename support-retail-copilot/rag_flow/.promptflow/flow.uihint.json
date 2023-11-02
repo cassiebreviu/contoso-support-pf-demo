@@ -1,0 +1,11 @@
+{
+  "nodes": {
+    "llm_call": {
+      "variant_0": {
+        "inputs": {
+          "prompt_text": []
+        }
+      }
+    }
+  }
+}

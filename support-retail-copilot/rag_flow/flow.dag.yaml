@@ -18,6 +18,12 @@ outputs:
     type: string
     reference: ${llm_call.output}
     is_chat_output: true
+  citations:
+    type: object
+    reference: ${retrieve_support_documentation.output}
+  customer_data:
+    type: string
+    reference: ${customer_lookup.output}
 nodes:
 - name: question_embedding
   type: python
@@ -62,7 +68,8 @@ nodes:
     path: llm_call.jinja2
   inputs:
     deployment_name: gpt-35-turbo
-    question: ${customer_prompt.output}
-    prompt_text: ${inputs.question}
+    question: ${inputs.question}
+    prompt_text: ${customer_prompt.output}
+    temperature: 0
   connection: contoso-aoai-connection
   api: chat

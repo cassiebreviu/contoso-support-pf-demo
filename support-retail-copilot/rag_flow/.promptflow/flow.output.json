@@ -1,3 +1,58 @@
 {
-  "answer": "Hi Emily! Thanks for reaching out. I'd be happy to help you with your previous order. Can you please let me know which order you're referring to? That way, I can provide you with accurate and personalized information. \ud83d\ude0a"
+  "answer": "Hi Emily Rodriguez 👋! Thank you for reaching out. Unfortunately, as an AI support agent, I don't have access to your previous orders. However, you can check your order history by logging into your account on our website. 🛍️👀",
+  "citations": [
+    {
+      "id": "cHJvZHVjdF9pbmZvXzE2Lm1kMg==",
+      "title": "Information about product item_number: 16",
+      "content": "# Information about product item_number: 16\n\n## Warranty Information\n\nWarranty Information for TrailLite Daypack:\n\n1. Warranty Coverage: \nThe TrailLite Daypack is covered by a warranty against defects in materials and workmanship for a period of one year from the date of purchase. This warranty is valid only for the original purchaser and is non-transferable.\n\n2. Warranty Claims:\nIn the event of a warranty claim, please contact our customer care within the warranty period. Provide the proof of purchase (receipt or order confirmation) along with a detailed description of the issue you are experiencing with the daypack.\n\n3. Warranty Exclusions:\nPlease note that this warranty does not cover damages resulting from:\n\n   1. Normal wear and tear, including scratches, abrasions, and color fading that occur with regular use.\n   2. Misuse, abuse, or improper care of the daypack, including exceeding weight limits, inappropriate storage, and neglect of maintenance.\n   3. Accidental or intentional damage caused by accidents, impacts, or any unauthorized repairs or modifications.\n   4. Damage resulting from extreme weather conditions, including exposure to excessive heat, cold, or moisture.\n   5. Any third-party modifications or additions made to the daypack.\n\n   4. Warranty Resolution:\n   Upon receipt of your warranty claim, our customer care team will assess the issue and determine the appropriate course of action. This may include repair, replacement, or providing a comparable product based on the nature of the defect and the available options. Please note that any shipping or transportation costs associated with the warranty claim are the responsibility of the customer.\n\n   For any warranty-related inquiries or claims, please contact our customer care team:\n\n4. Customer Care:\n   -  Phone: 1-800-123-4567\n   -  Email: customerservice@trailite.com\n\nOur dedicated customer care representatives are available during business hours to assist you with any questions or concerns you may have regarding the TrailLite Daypack or its warranty.\n\n## Return Policy\n- **If Membership status \"None        \":**\tReturns are accepted within 30 days of purchase, provided the backpack is unused, undamaged and in its original packaging. Customer is responsible for the cost of return shipping. Once the returned item is received, a refund will be issued for the cost of the item minus a 10% restocking fee. If the item was damaged during shipping or if there is a defect, the customer should contact customer service within 7 days of receiving the item.\n- **If Membership status \"Gold\":**\tReturns are accepted within 60 days of purchase, provided the backpack is unused, undamaged and in its original packaging. Free return shipping is provided. Once the returned item is received, a full refund will be issued. If the item was damaged during shipping or if there is a defect, the customer should contact customer service within 7 days of receiving the item.\n- **If Membership status \"Platinum\":**\tReturns are accepted within 90 days of purchase, provided the backpack is unused, undamaged and in its original packaging. Free return shipping is provided, and a full refund will be issued. If the item was damaged during shipping or if there is a defect, the customer should contact customer service within 7 days of receiving the item.                      \n\n## Reviews\n1) **Rating:** 4\n   **Review:** The TrailLite Daypack is a great companion for my hiking trips. It has ample storage space to fit all my essentials, and the adjustable straps provide a comfortable fit. The material is durable and water-resistant, keeping my belongings safe even during unexpected rain showers. The only improvement I would suggest is adding more internal compartments for better organization.\n\n2) **Rating:** 5\n   **Review:** I love my TrailLite Daypack! It's lightweight, yet sturdy enough to carry all my gear. The padded shoulder straps and back panel provide excellent comfort, even during long hikes. The multiple pockets and compartments help me stay organized, and the water bottle holder is a convenient feature. Highly recommended for outdoor enthusiasts!\n\n3) **Rating:** 3\n   **Review:** The TrailLite Daypack is decent for its price. It offers sufficient storage space and the overall construction seems durable. However, I found the zippers to be a bit flimsy, and they tend to get stuck sometimes. The shoulder straps could also use some extra padding for improved comfort, especially when carrying heavier loads.\n\n4) **Rating:** 5",
+      "url": "azureml://locations/eastus/workspaces/4ab2cc7d-74ab-4a3f-9ce1-218668c55b0e/data/vector-index-dataset-1698706245041/versions/1/product_info_16.md"
+    },
+    {
+      "id": "cHJvZHVjdF9pbmZvXzEwLm1kMg==",
+      "title": "Information about product item_number: 10",
+      "content": "# Information about product item_number: 10\n\n**Legal Rights:** This warranty gives you specific legal rights, and you may also have other rights that vary by jurisdiction.\n\nFor any warranty-related inquiries or to initiate a warranty claim, please contact our customer support using the provided contact information.Please retain your proof of purchase as it will be required to verify warranty eligibility.\n\n## Return Policy\n- **If Membership status \"None\":**\tCustomers can return the hiking clothing within 30 days of purchase for a full refund. The clothing must be unworn and in its original packaging with all tags attached. The return shipping cost will be borne by the customer.\n- **If Membership status \"Gold\":**\tCustomers can return the hiking clothing within 60 days of purchase for a full refund or exchange. The clothing must be unworn and in its original packaging with all tags attached. The return shipping cost will be borne by the company.\n- **If Membership status \"Platinum  \":**\tPlatinum members can return their hiking clothing within 90 days of purchase for a full refund or exchange. The product must be unused and in its original packaging. Additionally, Platinum members receive a 10% discount on all hiking clothing purchases.\n\n## Reviews\n## FAQ\n44) Are the TrailBlaze Hiking Pants suitable for cold weather?\n   While the TrailBlaze Hiking Pants are designed to be quick-drying, water-resistant, and breathable, they may not provide enough insulation for extremely cold weather. We recommend layering with thermal base layers for added warmth.\n\n45) Do the TrailBlaze Hiking Pants have an adjustable waistband?\n   Yes, the TrailBlaze Hiking Pants feature an adjustable waistband with a built-in belt, ensuring a comfortable and secure fit for various body shapes.\n\n46) Are the TrailBlaze Hiking Pants available in different lengths?\n   The TrailBlaze Hiking Pants are currently available in one standard length. However, the articulated knees and stretchy fabric provide flexibility and comfort for different leg lengths.\n\n47) Can the TrailBlaze Hiking Pants be worn in rainy conditions?\n   Yes, the TrailBlaze Hiking Pants are water-resistant, making them suitable for use in light rain. However, they may not provide complete protection in heavy rain or extended wet conditions.\n\n48) How many zippered pockets do the TrailBlaze Hiking Pants have?\n   The TrailBlaze Hiking Pants have two zippered hand pockets and two zippered thigh pockets, providing secure storage for your essentials while on the trail.",
+      "url": "azureml://locations/eastus/workspaces/4ab2cc7d-74ab-4a3f-9ce1-218668c55b0e/data/vector-index-dataset-1698706245041/versions/1/product_info_10.md"
+    }
+  ],
+  "customer_data": {
+    "id": "6",
+    "firstName": "Emily",
+    "lastName": "Rodriguez",
+    "age": 29,
+    "email": "emilyr@example.com",
+    "phone": "555-111-2222",
+    "address": "987 Oak Ave,  Cityville USA, 56789",
+    "membership": "nan",
+    "orders": [
+      {
+        "id": 3,
+        "productId": 1,
+        "quantity": 3,
+        "total": 750.0,
+        "date": "3/18/2023",
+        "name": "TrailMaster X4 Tent",
+        "unitprice": 250.0,
+        "category": "Tents",
+        "brand": "OutdoorLiving",
+        "description": "Unveiling the TrailMaster X4 Tent from OutdoorLiving, your home away from home for your next camping adventure. Crafted from durable polyester, this tent boasts a spacious interior perfect for four occupants. It ensures your dryness under drizzly skies thanks to its water-resistant construction, and the accompanying rainfly adds an extra layer of weather protection. It offers refreshing airflow and bug defence, courtesy of its mesh panels. Accessibility is not an issue with its multiple doors and interior pockets that keep small items tidy. Reflective guy lines grant better visibility at night, and the freestanding design simplifies setup and relocation. With the included carry bag, transporting this convenient abode becomes a breeze. Be it an overnight getaway or a week-long nature escapade, the TrailMaster X4 Tent provides comfort, convenience, and concord with the great outdoors. Comes with a two-year limited warranty to ensure customer satisfaction."
+      },
+      {
+        "id": 12,
+        "productId": 3,
+        "quantity": 2,
+        "total": 240.0,
+        "date": "2/20/2023",
+        "name": "Summit Breeze Jacket",
+        "unitprice": 120.0,
+        "category": "Hiking Clothing",
+        "brand": "MountainStyle",
+        "description": "Discover the joy of hiking with MountainStyle's Summit Breeze Jacket. This lightweight jacket is your perfect companion for outdoor adventures. Sporting a trail-ready, windproof design and a water-resistant fabric, it's ready to withstand any weather. The breathable polyester material and adjustable cuffs keep you comfortable, whether you're ascending a mountain or strolling through a park. And its sleek black color adds style to function. The jacket features a full-zip front closure, adjustable hood, and secure zippered pockets. Experience the comfort of its inner lining and the convenience of its packable design. Crafted for night trekkers too, the jacket has reflective accents for enhanced visibility. Rugged yet chic, the Summit Breeze Jacket is more than a hiking essential, it's the gear that inspires you to reach new heights. Choose adventure, choose the Summit Breeze Jacket."
+      }
+    ],
+    "_rid": "JjtiAM6RO-gGAAAAAAAAAA==",
+    "_self": "dbs/JjtiAA==/colls/JjtiAM6RO-g=/docs/JjtiAM6RO-gGAAAAAAAAAA==/",
+    "_etag": "\"01006efd-0000-0100-0000-653c64140000\"",
+    "_attachments": "attachments/",
+    "_ts": 1698456596
+  }
 }
