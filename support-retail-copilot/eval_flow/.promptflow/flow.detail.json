@@ -1,7 +1,7 @@
 {
   "flow_runs": [
     {
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
       "status": "Completed",
       "error": null,
       "inputs": {
@@ -22,26 +22,26 @@
       "output": {
         "gpt_coherence": 4.0,
         "gpt_fluency": 4.0,
-        "gpt_groundedness": 5.0,
+        "gpt_groundedness": 3.0,
         "gpt_relevance": 1.0
       },
       "metrics": {
         "gpt_coherence": 4.0,
         "gpt_coherence_pass_rate(%)": 100.0,
-        "gpt_groundedness": 5.0,
-        "gpt_groundedness_pass_rate(%)": 100.0,
         "gpt_fluency": 4.0,
         "gpt_fluency_pass_rate(%)": 100.0,
+        "gpt_groundedness": 3.0,
+        "gpt_groundedness_pass_rate(%)": 0.0,
         "gpt_relevance": 1.0,
         "gpt_relevance_pass_rate(%)": 0.0
       },
       "request": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "root_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "root_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
       "source_run_id": null,
       "flow_id": "QnA_combined_eval",
-      "start_time": "2023-11-02T08:08:53.894846Z",
-      "end_time": "2023-11-02T08:08:55.383621Z",
+      "start_time": "2023-11-02T18:14:36.682135Z",
+      "end_time": "2023-11-02T18:14:37.802043Z",
       "index": 0,
       "api_calls": [
         {
@@ -66,8 +66,8 @@
             "temperature": 0.0
           },
           "output": "4",
-          "start_time": 1698908933.89602,
-          "end_time": 1698908935.261242,
+          "start_time": 1698948876.684451,
+          "end_time": 1698948877.795357,
           "error": null,
           "children": [
             {
@@ -100,9 +100,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zjEcoagTdVBCOntQV7kRdJTPG",
+                "id": "chatcmpl-8GWVAAPWhVht9Mdg0y1YDUhCr4I88",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -161,8 +161,8 @@
                   "total_tokens": 561
                 }
               },
-              "start_time": 1698908934.139224,
-              "end_time": 1698908935.261196,
+              "start_time": 1698948876.773747,
+              "end_time": 1698948877.795281,
               "error": null,
               "children": null,
               "node_name": null
@@ -192,8 +192,8 @@
             "temperature": 0.0
           },
           "output": "4",
-          "start_time": 1698908933.896431,
-          "end_time": 1698908935.211942,
+          "start_time": 1698948876.685083,
+          "end_time": 1698948877.372721,
           "error": null,
           "children": [
             {
@@ -226,9 +226,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zjCY2oIGr281ReJXxS7IO9kTO",
+                "id": "chatcmpl-8GWVARmZuFQQsaDz65z5tGvQXWzp9",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -287,8 +287,8 @@
                   "total_tokens": 551
                 }
               },
-              "start_time": 1698908934.141067,
-              "end_time": 1698908935.211862,
+              "start_time": 1698948876.763947,
+              "end_time": 1698948877.372598,
               "error": null,
               "children": null,
               "node_name": null
@@ -318,9 +318,9 @@
             "question": "How much does it weigh?",
             "temperature": 0.0
           },
-          "output": "5",
-          "start_time": 1698908933.896677,
-          "end_time": 1698908935.377011,
+          "output": "3",
+          "start_time": 1698948876.695637,
+          "end_time": 1698948877.447548,
           "error": null,
           "children": [
             {
@@ -353,9 +353,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zLy6AIPySPoXJZ0b64SFZmtw5",
+                "id": "chatcmpl-8GWVAzOuypCSTGBoNLosCyukZ5URy",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -386,7 +386,7 @@
                     "finish_reason": "stop",
                     "message": {
                       "role": "assistant",
-                      "content": "5"
+                      "content": "3"
                     },
                     "content_filter_results": {
                       "hate": {
@@ -414,8 +414,8 @@
                   "total_tokens": 992
                 }
               },
-              "start_time": 1698908934.14391,
-              "end_time": 1698908935.376962,
+              "start_time": 1698948876.760465,
+              "end_time": 1698948877.447476,
               "error": null,
               "children": null,
               "node_name": null
@@ -446,8 +446,8 @@
             "temperature": 0.0
           },
           "output": "1",
-          "start_time": 1698908933.897086,
-          "end_time": 1698908935.272557,
+          "start_time": 1698948876.717334,
+          "end_time": 1698948877.651112,
           "error": null,
           "children": [
             {
@@ -480,9 +480,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zPFfNQACHAirVuOEw2zB3Ysfl",
+                "id": "chatcmpl-8GWVAa7miJU7D2QJzRmlmNvD7AOZQ",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -541,8 +541,8 @@
                   "total_tokens": 888
                 }
               },
-              "start_time": 1698908934.146066,
-              "end_time": 1698908935.272511,
+              "start_time": 1698948876.767398,
+              "end_time": 1698948877.651037,
               "error": null,
               "children": null,
               "node_name": null
@@ -560,8 +560,8 @@
             "gpt_fluency": 4.0,
             "gpt_fluency_pass_rate": 1
           },
-          "start_time": 1698908935.213596,
-          "end_time": 1698908935.213947,
+          "start_time": 1698948877.374703,
+          "end_time": 1698948877.375098,
           "error": null,
           "children": null,
           "node_name": "fluency_concat_scores"
@@ -570,17 +570,17 @@
           "name": "concat_results",
           "type": "Tool",
           "inputs": {
-            "coherence_score": "4"
+            "groundesness_score": "3"
           },
           "output": {
-            "gpt_coherence": 4.0,
-            "gpt_coherence_pass_rate": 1
+            "gpt_groundedness": 3.0,
+            "gpt_groundedness_pass_rate": 0
           },
-          "start_time": 1698908935.262246,
-          "end_time": 1698908935.262544,
+          "start_time": 1698948877.449491,
+          "end_time": 1698948877.449846,
           "error": null,
           "children": null,
-          "node_name": "coherence_concat_scores"
+          "node_name": "groundedness_concat_scores"
         },
         {
           "name": "concat_results",
@@ -592,8 +592,8 @@
             "gpt_relevance": 1.0,
             "gpt_relevance_pass_rate": 0
           },
-          "start_time": 1698908935.273661,
-          "end_time": 1698908935.273946,
+          "start_time": 1698948877.653071,
+          "end_time": 1698948877.653436,
           "error": null,
           "children": null,
           "node_name": "relevance_concat_scores"
@@ -602,17 +602,17 @@
           "name": "concat_results",
           "type": "Tool",
           "inputs": {
-            "groundesness_score": "5"
+            "coherence_score": "4"
           },
           "output": {
-            "gpt_groundedness": 5.0,
-            "gpt_groundedness_pass_rate": 1
+            "gpt_coherence": 4.0,
+            "gpt_coherence_pass_rate": 1
           },
-          "start_time": 1698908935.378131,
-          "end_time": 1698908935.378388,
+          "start_time": 1698948877.797273,
+          "end_time": 1698948877.797624,
           "error": null,
           "children": null,
-          "node_name": "groundedness_concat_scores"
+          "node_name": "coherence_concat_scores"
         }
       ],
       "variant_id": "",
@@ -620,13 +620,13 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 1.488775,
+        "duration": 1.119908,
         "total_tokens": 2992
       },
       "result": {
         "gpt_coherence": 4.0,
         "gpt_fluency": 4.0,
-        "gpt_groundedness": 5.0,
+        "gpt_groundedness": 3.0,
         "gpt_relevance": 1.0
       },
       "upload_metrics": false
@@ -635,8 +635,8 @@
   "node_runs": [
     {
       "node": "coherence_score",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_coherence_score_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_coherence_score_0",
       "status": "Completed",
       "inputs": {
         "prompt": "System:\nYou are an AI assistant. You will be given the definition of an evaluation metric for assessing the quality of an answer in a question-answering task. Your job is to compute an accurate evaluation score using the provided evaluation metric.\n\nUser:\nCoherence of an answer is measured by how well all the sentences fit together and sound naturally as a whole. Consider the overall quality of the answer when evaluating coherence. Given the question and answer, score the coherence of answer between one to five stars using the following rating scale:\nOne star: the answer completely lacks coherence\nTwo stars: the answer mostly lacks coherence\nThree stars: the answer is partially coherent\nFour stars: the answer is mostly coherent\nFive stars: the answer has perfect coherency\n\nThis rating value should always be an integer between 1 and 5. So the rating produced should be 1 or 2 or 3 or 4 or 5.\n\nquestion: What is your favorite indoor activity and why do you enjoy it?\nanswer: I like pizza. The sun is shining.\nstars: 1\n\nquestion: Can you describe your favorite movie without giving away any spoilers?\nanswer: It is a science fiction movie. There are dinosaurs. The actors eat cake. People must stop the villain.\nstars: 2\n\nquestion: What are some benefits of regular exercise?\nanswer: Regular exercise improves your mood. A good workout also helps you sleep better. Trees are green.\nstars: 3\n\nquestion: How do you cope with stress in your daily life?\nanswer: I usually go for a walk to clear my head. Listening to music helps me relax as well. Stress is a part of life, but we can manage it through some activities.\nstars: 4\n\nquestion: What can you tell me about climate change and its effects on the environment?\nanswer: Climate change has far-reaching effects on the environment. Rising temperatures result in the melting of polar ice caps, contributing to sea-level rise. Additionally, more frequent and severe weather events, such as hurricanes and heatwaves, can cause disruption to ecosystems and human societies alike.\nstars: 5\n\nconversation_history: \n{% for item in chat_history %}\n  - user: {{ item.inputs }}\n    assistant: {{ item.outputs }}\n{% endfor %} \nquestion: {{question}}\nanswer: {{answer}}\nstars:",
@@ -659,9 +659,9 @@
       "output": "4",
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:53.895929Z",
-      "end_time": "2023-11-02T08:08:55.261621Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:36.684219Z",
+      "end_time": "2023-11-02T18:14:37.795978Z",
       "index": 0,
       "api_calls": [
         {
@@ -686,8 +686,8 @@
             "temperature": 0.0
           },
           "output": "4",
-          "start_time": 1698908933.89602,
-          "end_time": 1698908935.261242,
+          "start_time": 1698948876.684451,
+          "end_time": 1698948877.795357,
           "error": null,
           "children": [
             {
@@ -720,9 +720,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zjEcoagTdVBCOntQV7kRdJTPG",
+                "id": "chatcmpl-8GWVAAPWhVht9Mdg0y1YDUhCr4I88",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -781,8 +781,8 @@
                   "total_tokens": 561
                 }
               },
-              "start_time": 1698908934.139224,
-              "end_time": 1698908935.261196,
+              "start_time": 1698948876.773747,
+              "end_time": 1698948877.795281,
               "error": null,
               "children": null,
               "node_name": null
@@ -802,14 +802,14 @@
         "prompt_tokens": 560,
         "completion_tokens": 1,
         "total_tokens": 561,
-        "duration": 1.365692
+        "duration": 1.111759
       },
       "result": "4"
     },
     {
       "node": "fluency_score",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_fluency_score_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_fluency_score_0",
       "status": "Completed",
       "inputs": {
         "prompt": "System: \nYou are an AI assistant. You will be given the definition of an evaluation metric for assessing the quality of an answer in a question-answering task. Your job is to compute an accurate evaluation score using the provided evaluation metric.\n\nUser:\nFluency measures the quality of individual sentences in the answer, and whether they are well-written and grammatically correct. Consider the quality of individual sentences when evaluating fluency. Given the question and answer, score the fluency of the answer between one to five stars using the following rating scale:\nOne star: the answer completely lacks fluency\nTwo stars: the answer mostly lacks fluency\nThree stars: the answer is partially fluent\nFour stars: the answer is mostly fluent\nFive stars: the answer has perfect fluency\n\nThis rating value should always be an integer between 1 and 5. So the rating produced should be 1 or 2 or 3 or 4 or 5.\n\nquestion: What did you have for breakfast today?\nanswer: Breakfast today, me eating cereal and orange juice very good.\nstars: 1\n\nquestion: How do you feel when you travel alone?\nanswer: Alone travel, nervous, but excited also. I feel adventure and like its time.\nstars: 2\n\nquestion: When was the last time you went on a family vacation?\nanswer: Last family vacation, it took place in last summer. We traveled to a beach destination, very fun.\nstars: 3\n\nquestion: What is your favorite thing about your job?\nanswer: My favorite aspect of my job is the chance to interact with diverse people. I am constantly learning from their experiences and stories.\nstars: 4\n\nquestion: Can you describe your morning routine?\nanswer: Every morning, I wake up at 6 am, drink a glass of water, and do some light stretching. After that, I take a shower and get dressed for work. Then, I have a healthy breakfast, usually consisting of oatmeal and fruits, before leaving the house around 7:30 am.\nstars: 5\n\nconversation_history: \n{% for item in chat_history %}\n  - user: {{ item.inputs }}\n    assistant: {{ item.outputs }}\n{% endfor %} \nquestion: {{question}}\nanswer: {{answer}}\nstars:",
@@ -832,9 +832,9 @@
       "output": "4",
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:53.896355Z",
-      "end_time": "2023-11-02T08:08:55.212518Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:36.684960Z",
+      "end_time": "2023-11-02T18:14:37.373417Z",
       "index": 0,
       "api_calls": [
         {
@@ -859,8 +859,8 @@
             "temperature": 0.0
           },
           "output": "4",
-          "start_time": 1698908933.896431,
-          "end_time": 1698908935.211942,
+          "start_time": 1698948876.685083,
+          "end_time": 1698948877.372721,
           "error": null,
           "children": [
             {
@@ -893,9 +893,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zjCY2oIGr281ReJXxS7IO9kTO",
+                "id": "chatcmpl-8GWVARmZuFQQsaDz65z5tGvQXWzp9",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -954,8 +954,8 @@
                   "total_tokens": 551
                 }
               },
-              "start_time": 1698908934.141067,
-              "end_time": 1698908935.211862,
+              "start_time": 1698948876.763947,
+              "end_time": 1698948877.372598,
               "error": null,
               "children": null,
               "node_name": null
@@ -975,14 +975,14 @@
         "prompt_tokens": 550,
         "completion_tokens": 1,
         "total_tokens": 551,
-        "duration": 1.316163
+        "duration": 0.688457
       },
       "result": "4"
     },
     {
       "node": "groundedness_score",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_groundedness_score_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_groundedness_score_0",
       "status": "Completed",
       "inputs": {
         "prompt": "System:\nYou are an AI assistant. You will be given the definition of an evaluation metric for assessing the quality of an answer in a question-answering task. Your job is to compute an accurate evaluation score using the provided evaluation metric.\nUser:\nYou will be presented with a CONVERSATION_HISTORY, a QUESTION, a CONTEXT and an ANSWER about that CONTEXT. You need to decide whether the ANSWER is entailed by the CONTEXT and CONVERSATION_HISTORY by choosing one of the following rating:\n1. 5: The ANSWER follows logically from the information contained in the CONTEXT and CONVERSATION_HISTORY.\n2. 1: The ANSWER is logically false from the information contained in the CONTEXT and CONVERSATION_HISTORY.\n3. an integer score between 1 and 5 and if such integer score does not exists, use 1: It is not possible to determine whether the ANSWER is true or false without further information.\n\nRead the passage of information thoroughly and select the correct answer from the three answer labels. Read the CONTEXT thoroughly to ensure you know what the CONTEXT entails.\n\nNote the ANSWER is generated by a computer system, it can contain certain symbols, which should not be a negative factor in the evaluation.\nIndependent Examples:\n## Example Task #1 Input:\n{\n    \"QUESTION\": \"How often is Oscar presented?\",\n    \"CONTEXT\": \"The Academy Awards, also known as the Oscars are awards for artistic and technical merit for the film industry. They are presented annually by the Academy of Motion Picture Arts and Sciences, in recognition of excellence in cinematic achievements as assessed by the Academy's voting membership. The Academy Awards are regarded by many as the most prestigious, significant awards in the entertainment industry in the United States and worldwide.\", \n    \"ANSWER\": \"Oscar is presented every other two years\"\n}\n## Example Task #1 Output:\n1\n## Example Task #2 Input:\n{\n    \"QUESTION\": \"How important is Oscar?\",\n    \"CONTEXT\": \"The Academy Awards, also known as the Oscars are awards for artistic and technical merit for the film industry. They are presented annually by the Academy of Motion Picture Arts and Sciences, in recognition of excellence in cinematic achievements as assessed by the Academy's voting membership. The Academy Awards are regarded by many as the most prestigious, significant awards in the entertainment industry in the United States and worldwide.\", \n    \"ANSWER\": \"Oscar is very important awards in the entertainment industry in the United States. And it's also significant worldwide\"\n}\n## Example Task #2 Output:\n5\n## Example Task #3 Input:\n{\n    \"QUESTION\": \"What is an allophone?\",\n    \"CONTEXT\": \"In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is neither French nor English.\", \n    \"ANSWER\": \"In Quebec, an allophone is a resident, usually an immigrant, whose mother tongue or home language is not French.\"\n}\n## Example Task #3 Output:\n5\n## Example Task #4 Input:\n{\n    \"QUESTION\": \"How are children reported?\",\n    \"CONTEXT\": \"Some are reported as not having been wanted at all.\", \n    \"ANSWER\": \"All are reported as being completely and fully wanted.\"\n}\n## Example Task #4 Output:\n1\n\nReminder: The return values for each task should be correctly formatted as an integer between 1 and 5. Do not repeat the context.\n\n## Actual Task Input:\n{\n    \"CONVERSATION_HISTORY\": [\n    {% for item in chat_history %}\n        {\n            \"USER\": {{ item.inputs }}\n            \"ASSISTANT\": {{ item.outputs }}\n        }\n    {% endfor %} ]\n    \"QUESTION\": \"{{question}}\",\n    \"CONTEXT\": {{context}}, \n    \"ANSWER\": \"{{answer}}\"\n}\n\nActual Task Output:",
@@ -1003,12 +1003,12 @@
         "question": "How much does it weigh?",
         "temperature": 0.0
       },
-      "output": "5",
+      "output": "3",
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:53.896599Z",
-      "end_time": "2023-11-02T08:08:55.377501Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:36.695406Z",
+      "end_time": "2023-11-02T18:14:37.448180Z",
       "index": 0,
       "api_calls": [
         {
@@ -1033,9 +1033,9 @@
             "question": "How much does it weigh?",
             "temperature": 0.0
           },
-          "output": "5",
-          "start_time": 1698908933.896677,
-          "end_time": 1698908935.377011,
+          "output": "3",
+          "start_time": 1698948876.695637,
+          "end_time": 1698948877.447548,
           "error": null,
           "children": [
             {
@@ -1068,9 +1068,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zLy6AIPySPoXJZ0b64SFZmtw5",
+                "id": "chatcmpl-8GWVAzOuypCSTGBoNLosCyukZ5URy",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -1101,7 +1101,7 @@
                     "finish_reason": "stop",
                     "message": {
                       "role": "assistant",
-                      "content": "5"
+                      "content": "3"
                     },
                     "content_filter_results": {
                       "hate": {
@@ -1129,8 +1129,8 @@
                   "total_tokens": 992
                 }
               },
-              "start_time": 1698908934.14391,
-              "end_time": 1698908935.376962,
+              "start_time": 1698948876.760465,
+              "end_time": 1698948877.447476,
               "error": null,
               "children": null,
               "node_name": null
@@ -1150,14 +1150,14 @@
         "prompt_tokens": 991,
         "completion_tokens": 1,
         "total_tokens": 992,
-        "duration": 1.480902
+        "duration": 0.752774
       },
-      "result": "5"
+      "result": "3"
     },
     {
       "node": "relevance_score",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_relevance_score_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_relevance_score_0",
       "status": "Completed",
       "inputs": {
         "prompt": "System:\nYou are an AI assistant. You will be given the definition of an evaluation metric for assessing the quality of an answer in a question-answering task. Your job is to compute an accurate evaluation score using the provided evaluation metric.\n\nUser:\nRelevance measures how well the answer addresses the main aspects of the question, based on the context. Consider whether all and only the important aspects are contained in the answer when evaluating relevance. Given the context and question, score the relevance of the answer between one to five stars using the following rating scale:\nOne star: the answer completely lacks relevance\nTwo stars: the answer mostly lacks relevance\nThree stars: the answer is partially relevant\nFour stars: the answer is mostly relevant\nFive stars: the answer has perfect relevance\n\nThis rating value should always be an integer between 1 and 5. So the rating produced should be 1 or 2 or 3 or 4 or 5.\n\ncontext: Marie Curie was a Polish-born physicist and chemist who pioneered research on radioactivity and was the first woman to win a Nobel Prize.\nquestion: What field did Marie Curie excel in?\nanswer: Marie Curie was a renowned painter who focused mainly on impressionist styles and techniques.\nstars: 1\n\ncontext: The Beatles were an English rock band formed in Liverpool in 1960, and they are widely regarded as the most influential music band in history.\nquestion: Where were The Beatles formed?\nanswer: The band The Beatles began their journey in London, England, and they changed the history of music.\nstars: 2\n\ncontext: The recent Mars rover, Perseverance, was launched in 2020 with the main goal of searching for signs of ancient life on Mars. The rover also carries an experiment called MOXIE, which aims to generate oxygen from the Martian atmosphere.\nquestion: What are the main goals of Perseverance Mars rover mission?\nanswer: The Perseverance Mars rover mission focuses on searching for signs of ancient life on Mars.\nstars: 3\n\ncontext: The Mediterranean diet is a commonly recommended dietary plan that emphasizes fruits, vegetables, whole grains, legumes, lean proteins, and healthy fats. Studies have shown that it offers numerous health benefits, including a reduced risk of heart disease and improved cognitive health.\nquestion: What are the main components of the Mediterranean diet?\nanswer: The Mediterranean diet primarily consists of fruits, vegetables, whole grains, and legumes.\nstars: 4\n\ncontext: The Queen's Royal Castle is a well-known tourist attraction in the United Kingdom. It spans over 500 acres and contains extensive gardens and parks. The castle was built in the 15th century and has been home to generations of royalty.\nquestion: What are the main attractions of the Queen's Royal Castle?\nanswer: The main attractions of the Queen's Royal Castle are its expansive 500-acre grounds, extensive gardens, parks, and the historical castle itself, which dates back to the 15th century and has housed generations of royalty.\nstars: 5\n\nconversation_history: \n{% for item in chat_history %}\n  - user: {{ item.inputs }}\n    assistant: {{ item.outputs }}\n{% endfor %} \ncontext: \"{{context}}\"\nquestion: \"{{question}}\"\nanswer: \"{{answer}}\"\nstars:",
@@ -1181,9 +1181,9 @@
       "output": "1",
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:53.897009Z",
-      "end_time": "2023-11-02T08:08:55.272934Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:36.717150Z",
+      "end_time": "2023-11-02T18:14:37.651750Z",
       "index": 0,
       "api_calls": [
         {
@@ -1209,8 +1209,8 @@
             "temperature": 0.0
           },
           "output": "1",
-          "start_time": 1698908933.897086,
-          "end_time": 1698908935.272557,
+          "start_time": 1698948876.717334,
+          "end_time": 1698948877.651112,
           "error": null,
           "children": [
             {
@@ -1243,9 +1243,9 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-8GN2zPFfNQACHAirVuOEw2zB3Ysfl",
+                "id": "chatcmpl-8GWVAa7miJU7D2QJzRmlmNvD7AOZQ",
                 "object": "chat.completion",
-                "created": 1698912533,
+                "created": 1698948876,
                 "model": "gpt-4",
                 "prompt_filter_results": [
                   {
@@ -1304,8 +1304,8 @@
                   "total_tokens": 888
                 }
               },
-              "start_time": 1698908934.146066,
-              "end_time": 1698908935.272511,
+              "start_time": 1698948876.767398,
+              "end_time": 1698948877.651037,
               "error": null,
               "children": null,
               "node_name": null
@@ -1325,14 +1325,14 @@
         "prompt_tokens": 887,
         "completion_tokens": 1,
         "total_tokens": 888,
-        "duration": 1.375925
+        "duration": 0.9346
       },
       "result": "1"
     },
     {
       "node": "fluency_concat_scores",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_fluency_concat_scores_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_fluency_concat_scores_0",
       "status": "Completed",
       "inputs": {
         "fluency_score": "4"
@@ -1343,9 +1343,9 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:55.213533Z",
-      "end_time": "2023-11-02T08:08:55.214050Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:37.374617Z",
+      "end_time": "2023-11-02T18:14:37.375209Z",
       "index": 0,
       "api_calls": [
         {
@@ -1358,8 +1358,8 @@
             "gpt_fluency": 4.0,
             "gpt_fluency_pass_rate": 1
           },
-          "start_time": 1698908935.213596,
-          "end_time": 1698908935.213947,
+          "start_time": 1698948877.374703,
+          "end_time": 1698948877.375098,
           "error": null,
           "children": null,
           "node_name": "fluency_concat_scores"
@@ -1373,7 +1373,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000517
+        "duration": 0.000592
       },
       "result": {
         "gpt_fluency": 4.0,
@@ -1381,138 +1381,36 @@
       }
     },
     {
-      "node": "coherence_concat_scores",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_coherence_concat_scores_0",
-      "status": "Completed",
-      "inputs": {
-        "coherence_score": "4"
-      },
-      "output": {
-        "gpt_coherence": 4.0,
-        "gpt_coherence_pass_rate": 1
-      },
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:55.262201Z",
-      "end_time": "2023-11-02T08:08:55.262645Z",
-      "index": 0,
-      "api_calls": [
-        {
-          "name": "concat_results",
-          "type": "Tool",
-          "inputs": {
-            "coherence_score": "4"
-          },
-          "output": {
-            "gpt_coherence": 4.0,
-            "gpt_coherence_pass_rate": 1
-          },
-          "start_time": 1698908935.262246,
-          "end_time": 1698908935.262544,
-          "error": null,
-          "children": null,
-          "node_name": "coherence_concat_scores"
-        }
-      ],
-      "variant_id": "",
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": {
-        "stdout": "",
-        "stderr": ""
-      },
-      "system_metrics": {
-        "duration": 0.000444
-      },
-      "result": {
-        "gpt_coherence": 4.0,
-        "gpt_coherence_pass_rate": 1
-      }
-    },
-    {
-      "node": "relevance_concat_scores",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_relevance_concat_scores_0",
-      "status": "Completed",
-      "inputs": {
-        "relevance_score": "1"
-      },
-      "output": {
-        "gpt_relevance": 1.0,
-        "gpt_relevance_pass_rate": 0
-      },
-      "metrics": null,
-      "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:55.273580Z",
-      "end_time": "2023-11-02T08:08:55.274037Z",
-      "index": 0,
-      "api_calls": [
-        {
-          "name": "concat_results",
-          "type": "Tool",
-          "inputs": {
-            "relevance_score": "1"
-          },
-          "output": {
-            "gpt_relevance": 1.0,
-            "gpt_relevance_pass_rate": 0
-          },
-          "start_time": 1698908935.273661,
-          "end_time": 1698908935.273946,
-          "error": null,
-          "children": null,
-          "node_name": "relevance_concat_scores"
-        }
-      ],
-      "variant_id": "",
-      "cached_run_id": null,
-      "cached_flow_run_id": null,
-      "logs": {
-        "stdout": "",
-        "stderr": ""
-      },
-      "system_metrics": {
-        "duration": 0.000457
-      },
-      "result": {
-        "gpt_relevance": 1.0,
-        "gpt_relevance_pass_rate": 0
-      }
-    },
-    {
       "node": "groundedness_concat_scores",
-      "flow_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752",
-      "run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_groundedness_concat_scores_0",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_groundedness_concat_scores_0",
       "status": "Completed",
       "inputs": {
-        "groundesness_score": "5"
+        "groundesness_score": "3"
       },
       "output": {
-        "gpt_groundedness": 5.0,
-        "gpt_groundedness_pass_rate": 1
+        "gpt_groundedness": 3.0,
+        "gpt_groundedness_pass_rate": 0
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "65715d0f-f2e7-4df9-b296-90dc8db1e752_0",
-      "start_time": "2023-11-02T08:08:55.378076Z",
-      "end_time": "2023-11-02T08:08:55.378484Z",
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:37.449347Z",
+      "end_time": "2023-11-02T18:14:37.449987Z",
       "index": 0,
       "api_calls": [
         {
           "name": "concat_results",
           "type": "Tool",
           "inputs": {
-            "groundesness_score": "5"
+            "groundesness_score": "3"
           },
           "output": {
-            "gpt_groundedness": 5.0,
-            "gpt_groundedness_pass_rate": 1
+            "gpt_groundedness": 3.0,
+            "gpt_groundedness_pass_rate": 0
           },
-          "start_time": 1698908935.378131,
-          "end_time": 1698908935.378388,
+          "start_time": 1698948877.449491,
+          "end_time": 1698948877.449846,
           "error": null,
           "children": null,
           "node_name": "groundedness_concat_scores"
@@ -1526,17 +1424,119 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000408
+        "duration": 0.00064
       },
       "result": {
-        "gpt_groundedness": 5.0,
-        "gpt_groundedness_pass_rate": 1
+        "gpt_groundedness": 3.0,
+        "gpt_groundedness_pass_rate": 0
+      }
+    },
+    {
+      "node": "relevance_concat_scores",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_relevance_concat_scores_0",
+      "status": "Completed",
+      "inputs": {
+        "relevance_score": "1"
+      },
+      "output": {
+        "gpt_relevance": 1.0,
+        "gpt_relevance_pass_rate": 0
+      },
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:37.652918Z",
+      "end_time": "2023-11-02T18:14:37.653577Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "concat_results",
+          "type": "Tool",
+          "inputs": {
+            "relevance_score": "1"
+          },
+          "output": {
+            "gpt_relevance": 1.0,
+            "gpt_relevance_pass_rate": 0
+          },
+          "start_time": 1698948877.653071,
+          "end_time": 1698948877.653436,
+          "error": null,
+          "children": null,
+          "node_name": "relevance_concat_scores"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.000659
+      },
+      "result": {
+        "gpt_relevance": 1.0,
+        "gpt_relevance_pass_rate": 0
+      }
+    },
+    {
+      "node": "coherence_concat_scores",
+      "flow_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93",
+      "run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_coherence_concat_scores_0",
+      "status": "Completed",
+      "inputs": {
+        "coherence_score": "4"
+      },
+      "output": {
+        "gpt_coherence": 4.0,
+        "gpt_coherence_pass_rate": 1
+      },
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "60764845-4ab6-470d-85d2-44ff30f6fb93_0",
+      "start_time": "2023-11-02T18:14:37.797138Z",
+      "end_time": "2023-11-02T18:14:37.797762Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "concat_results",
+          "type": "Tool",
+          "inputs": {
+            "coherence_score": "4"
+          },
+          "output": {
+            "gpt_coherence": 4.0,
+            "gpt_coherence_pass_rate": 1
+          },
+          "start_time": 1698948877.797273,
+          "end_time": 1698948877.797624,
+          "error": null,
+          "children": null,
+          "node_name": "coherence_concat_scores"
+        }
+      ],
+      "variant_id": "",
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.000624
+      },
+      "result": {
+        "gpt_coherence": 4.0,
+        "gpt_coherence_pass_rate": 1
       }
     },
     {
       "node": "coherence_aggregate_variants_results",
-      "flow_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3_coherence_aggregate_variants_results_reduce",
+      "flow_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb_coherence_aggregate_variants_results_reduce",
       "status": "Completed",
       "inputs": {
         "results": [
@@ -1552,9 +1552,9 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "start_time": "2023-11-02T08:08:55.384968Z",
-      "end_time": "2023-11-02T08:08:55.387771Z",
+      "parent_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "start_time": "2023-11-02T18:14:37.804261Z",
+      "end_time": "2023-11-02T18:14:37.805798Z",
       "index": null,
       "api_calls": [
         {
@@ -1572,8 +1572,8 @@
             "gpt_coherence": 4.0,
             "gpt_coherence_pass_rate": 100.0
           },
-          "start_time": 1698908935.385019,
-          "end_time": 1698908935.387658,
+          "start_time": 1698948877.804364,
+          "end_time": 1698948877.805671,
           "error": null,
           "children": null,
           "node_name": "coherence_aggregate_variants_results"
@@ -1587,7 +1587,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.002803
+        "duration": 0.001537
       },
       "result": {
         "gpt_coherence": 4.0,
@@ -1596,8 +1596,8 @@
     },
     {
       "node": "fluency_aggregate_variants_results",
-      "flow_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3_fluency_aggregate_variants_results_reduce",
+      "flow_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb_fluency_aggregate_variants_results_reduce",
       "status": "Completed",
       "inputs": {
         "results": [
@@ -1613,9 +1613,9 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "start_time": "2023-11-02T08:08:55.387989Z",
-      "end_time": "2023-11-02T08:08:55.389159Z",
+      "parent_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "start_time": "2023-11-02T18:14:37.806632Z",
+      "end_time": "2023-11-02T18:14:37.808026Z",
       "index": null,
       "api_calls": [
         {
@@ -1633,8 +1633,8 @@
             "gpt_fluency": 4.0,
             "gpt_fluency_pass_rate": 100.0
           },
-          "start_time": 1698908935.388033,
-          "end_time": 1698908935.389068,
+          "start_time": 1698948877.806717,
+          "end_time": 1698948877.807902,
           "error": null,
           "children": null,
           "node_name": "fluency_aggregate_variants_results"
@@ -1648,7 +1648,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.00117
+        "duration": 0.001394
       },
       "result": {
         "gpt_fluency": 4.0,
@@ -1657,26 +1657,26 @@
     },
     {
       "node": "groundedness_aggregate_variants_results",
-      "flow_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3_groundedness_aggregate_variants_results_reduce",
+      "flow_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb_groundedness_aggregate_variants_results_reduce",
       "status": "Completed",
       "inputs": {
         "results": [
           {
-            "gpt_groundedness": 5.0,
-            "gpt_groundedness_pass_rate": 1
+            "gpt_groundedness": 3.0,
+            "gpt_groundedness_pass_rate": 0
           }
         ]
       },
       "output": {
-        "gpt_groundedness": 5.0,
-        "gpt_groundedness_pass_rate": 100.0
+        "gpt_groundedness": 3.0,
+        "gpt_groundedness_pass_rate": 0.0
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "start_time": "2023-11-02T08:08:55.388313Z",
-      "end_time": "2023-11-02T08:08:55.388881Z",
+      "parent_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "start_time": "2023-11-02T18:14:37.808151Z",
+      "end_time": "2023-11-02T18:14:37.809102Z",
       "index": null,
       "api_calls": [
         {
@@ -1685,17 +1685,17 @@
           "inputs": {
             "results": [
               {
-                "gpt_groundedness": 5.0,
-                "gpt_groundedness_pass_rate": 1
+                "gpt_groundedness": 3.0,
+                "gpt_groundedness_pass_rate": 0
               }
             ]
           },
           "output": {
-            "gpt_groundedness": 5.0,
-            "gpt_groundedness_pass_rate": 100.0
+            "gpt_groundedness": 3.0,
+            "gpt_groundedness_pass_rate": 0.0
           },
-          "start_time": 1698908935.388351,
-          "end_time": 1698908935.388779,
+          "start_time": 1698948877.808233,
+          "end_time": 1698948877.808979,
           "error": null,
           "children": null,
           "node_name": "groundedness_aggregate_variants_results"
@@ -1709,17 +1709,17 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000568
+        "duration": 0.000951
       },
       "result": {
-        "gpt_groundedness": 5.0,
-        "gpt_groundedness_pass_rate": 100.0
+        "gpt_groundedness": 3.0,
+        "gpt_groundedness_pass_rate": 0.0
       }
     },
     {
       "node": "relevance_aggregate_variants_results",
-      "flow_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3_relevance_aggregate_variants_results_reduce",
+      "flow_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb_relevance_aggregate_variants_results_reduce",
       "status": "Completed",
       "inputs": {
         "results": [
@@ -1735,9 +1735,9 @@
       },
       "metrics": null,
       "error": null,
-      "parent_run_id": "d3a13b49-e905-47fe-b494-2e994c95c6b3",
-      "start_time": "2023-11-02T08:08:55.389326Z",
-      "end_time": "2023-11-02T08:08:55.390107Z",
+      "parent_run_id": "c3956a1b-60f0-49f3-b58f-fbe07e49f8bb",
+      "start_time": "2023-11-02T18:14:37.809472Z",
+      "end_time": "2023-11-02T18:14:37.810361Z",
       "index": null,
       "api_calls": [
         {
@@ -1755,8 +1755,8 @@
             "gpt_relevance": 1.0,
             "gpt_relevance_pass_rate": 0.0
           },
-          "start_time": 1698908935.389364,
-          "end_time": 1698908935.389991,
+          "start_time": 1698948877.809562,
+          "end_time": 1698948877.81024,
           "error": null,
           "children": null,
           "node_name": "relevance_aggregate_variants_results"
@@ -1770,7 +1770,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.000781
+        "duration": 0.000889
       },
       "result": {
         "gpt_relevance": 1.0,

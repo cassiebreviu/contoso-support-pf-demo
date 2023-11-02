@@ -1,9 +1,30 @@
 {
   "nodes": {
+    "question_embedding": {
+      "variant_0": {
+        "inputs": {}
+      }
+    },
+    "customer_lookup": {
+      "variant_0": {
+        "inputs": {}
+      }
+    },
+    "retrieve_support_documentation": {
+      "variant_0": {
+        "inputs": {}
+      }
+    },
+    "customer_prompt": {
+      "variant_0": {
+        "inputs": {}
+      }
+    },
     "llm_call": {
       "variant_0": {
         "inputs": {
-          "prompt_text": []
+          "prompt_text": [],
+          "history": []
         }
       }
     }

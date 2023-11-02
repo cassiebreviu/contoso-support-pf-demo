@@ -80,7 +80,6 @@ nodes:
   inputs:
     customer: ${customer_lookup.output}
     documentation: ${retrieve_support_documentation.output}
-    history: ${inputs.chat_history}
   use_variants: false
 - name: llm_call
   type: llm
