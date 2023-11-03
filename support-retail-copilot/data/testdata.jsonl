@@ -22,4 +22,5 @@
 {"customerId": "8", "chat_history": [], "question": "is your seattle store still open?"}
 {"customerId": "8", "chat_history": [], "question": "I purchased a TrailMaster X4 tents from you earlier this year -- can you remind me when that was?"}
 {"customerId": "8", "chat_history": [], "question": "what is the waterproof rating of the tent I bought a few months ago?"}
-{"customerId": "6", "chat_history": [], "question": "what is the waterproof rating of the tent I just ordered?"}
+{"customerId": "6", "chat_history": [], "question": "what is the waterproof rating of the TrailMaster X4 Tent?"}
+{"customerId": "6", "chat_history": [{"inputs": {"question": "what tent have I recently ordered?"}, "outputs": {"answer": "Hi Emily! \ud83c\udf1e Based on your previous orders, you recently purchased the TrailMaster X4 Tent from OutdoorLiving. \ud83c\udfd5\ufe0f It's a spacious and durable tent perfect for four occupants, with water-resistant construction and refreshing airflow. Don't forget it comes with a two-year limited warranty! \ud83d\udee1\ufe0f Let me know if you have any other questions. \ud83d\ude0a"}}], "question": "what is its waterproof rating?"}

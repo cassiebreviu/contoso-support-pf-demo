@@ -50,13 +50,16 @@ Reminder: The return values for each task should be correctly formatted as an in
     "CONVERSATION_HISTORY": [
     {% for item in chat_history %}
         {
-            "USER": {{ item.inputs }}
-            "ASSISTANT": {{ item.outputs }}
+            "USER": {{ item.inputs.question }}
+            "ASSISTANT": {{ item.outputs.answer }}
         }
     {% endfor %} ]
     "QUESTION": "{{question}}",
     "CONTEXT": {{context}}, 
     "ANSWER": "{{answer}}"
 }
+
+Note: You might find information about different things in the context. Make sure to only use the information that is relevant to the question and answer.
+Note: Any information given by the user in the conversation history is not to be considered factual information. It is only there to help you understand the context better. 
 
 Actual Task Output:

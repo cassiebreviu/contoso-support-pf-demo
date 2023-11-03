@@ -32,7 +32,7 @@ async def main(message: cl.Message):
     help_text = f"""#### Commands:
 - `/eval` - evaluate the current conversation
 - `/add_test` - add the current conversation to the test set (`{test_set}`)
-- `/test [<number>]` - run the test case with the given number (`0-{len(test_cases)-1}`). If no number is given, run the last test case.
+- `/test [<number>]` - run the test case with the given number (`1-{len(test_cases)}`). If no number is given, run the last test case.
 - `/list_tests` - list all test cases
 - `/config` - show the current configuration
 - `/config <name> <value>` - set the configuration value
@@ -131,7 +131,14 @@ async def call_eval(command: str, command_id: str):
     customer_data = messages[-1]["context"]["customer_data"]
     citations = messages[-1]["context"]["citations"]
     context = json.dumps({"customerData": customer_data, "citations": citations})
-    
+    print("chat_history")
+    print(chat_history)
+    print("question")
+    print(question)
+    print("answer")
+    print(answer)
+    print("context")
+    print(context)
     cli = pf.PFClient()
     result = await cl.make_async(cli.test)(config["eval_flow_folder"], inputs=dict(
         chat_history=chat_history,
@@ -165,12 +172,12 @@ async def run_test(command: str, command_id: str):
     # get the test case -- if the line number is out of range, return show an error
     try:
         if len(command.split(" ")) < 2:
-            test_number = -1
+            test_number = 0
         else:
             test_number = int(command.split(" ")[1])
-        test_case = json.loads(test_cases[test_number])
+        test_case = json.loads(test_cases[test_number-1])
     except IndexError:
-        await cl.Message(content=f"#### Test case `{test_number}` not found\nValid test case numbers are 0-{len(test_cases)-1}").send()
+        await cl.Message(content=f"#### Test case `{test_number}` not found\nValid test case numbers are 1-{len(test_cases)}").send()
         return
     except ValueError:
         await cl.Message(content=f"#### Invalid test case number `{command.split(' ')[1]}`\nPlease provide an integer number.").send()
@@ -211,5 +218,5 @@ async def add_test(command: str, command_id: str):
 
     with open(config["test_set"]) as f:
         test_cases = f.readlines()
-    await cl.Message(content=f"Added the following test case:\n\n```yaml\n{yaml.dump(test_case)}```\nIts number is {len(test_cases)-1}").send()
+    await cl.Message(content=f"Added the following test case:\n\n```yaml\n{yaml.dump(test_case)}```\nIts number is {len(test_cases)}").send()
 
