@@ -67,9 +67,9 @@ nodes:
     type: code
     path: retrieve_support_documentation.py
   inputs:
-    search: copilot-search
+    search: contoso-search
     question: ${inputs.question}
-    index_name: rag-promptflow-index
+    index_name: contoso-manuals-chunked
     embedding: ${question_embedding.output}
   use_variants: false
 - name: customer_prompt

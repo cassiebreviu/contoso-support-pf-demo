@@ -10,6 +10,4 @@ if [ "$current_dir" != "support-retail-copilot" ]; then
     exit 1
 fi
 
-# Continue execution
-echo "You are in the correct directory. Continuing execution..."
-chainlit run exp/app.py -w --port 9000
+chainlit run exp/app.py -w
