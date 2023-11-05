@@ -112,20 +112,20 @@ def evaluate_prompt_flow(prompt_flow, eval_flow, batch_results):
 
 if __name__ == "__main__":
     print("cwd:", os.getcwd())
-    test_set_file = "support-retail-copilot/data/testdata.jsonl"
-    test_set_result_file = "support-retail-copilot/data/replies.jsonl"
-    prompt_flow = "support-retail-copilot/rag_flow"
-    eval_flow = "support-retail-copilot/eval_flow"
+    test_set_file = "data/testdata.jsonl"
+    test_set_result_file = "data/replies.jsonl"
+    prompt_flow = "rag_flow"
+    eval_flow = "eval_flow"
 
     with open(test_set_file) as f:
         test_set = [json.loads(line) for line in f]
     
     batch_results = batch_run(prompt_flow, test_set, test_set_result_file)
 
-    # client = AIClient.from_config(DefaultAzureCredential())
-    # result = evaluate_test_set(client, batch_results)
-
-    result = evaluate_prompt_flow(prompt_flow, eval_flow, batch_results)
-
-    print("result:", result)
-
+    client = AIClient.from_config(DefaultAzureCredential())
+    result = evaluate_test_set(client, batch_results)
+    print(result.metrics_summary)
+    # result = evaluate_prompt_flow(prompt_flow, eval_flow, batch_results)
+    # import pandas as pd
+    # df = pd.DataFrame(result)
+    # print(df.describe())    
