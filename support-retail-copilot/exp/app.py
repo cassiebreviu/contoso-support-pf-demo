@@ -14,10 +14,10 @@ def start_chat():
     clear_chat_history()
     cl.user_session.set("test_case", None)
     config = dict(
-        promptflow_folder = "./rag_flow",
-        eval_flow_folder = "./eval_flow",
+        promptflow = "./rag_flow",
+        evalflow = "./eval_flow",
         test_set = "data/testdata.jsonl",
-        customer_id = "8"
+        customer_id = "7"
     )
     cl.user_session.set("config", config)
 
@@ -80,7 +80,7 @@ async def call_chat(question: str, question_id: str, context=None):
     config = cl.user_session.get("config")
     message_history = cl.user_session.get("message_history")
     messages = cl.user_session.get("messages")
-    chat_app = PromptFlowChat(prompt_flow=config["promptflow_folder"])
+    chat_app = PromptFlowChat(prompt_flow=config["promptflow"])
     message_history.append({"role": "user", "content": question})
     messages.append({"role": "user", "content": question})
     context= context or {"customerId": config["customer_id"]}
@@ -103,16 +103,18 @@ async def call_chat(question: str, question_id: str, context=None):
             if "context" in chunk["choices"][0]["delta"]:
                 context = chunk["choices"][0]["delta"]["context"]
                 # add some metadata to help with debugging
-                if "customer_data" in context:
-                    customer_info = {k: v for k, v in context["customer_data"].items() if k != "orders" and not k.startswith("_")}
+                if "context" in context:
+                    customer_info = {k: v for k, v in context["context"]["customer_data"].items() if k != "orders" and not k.startswith("_")}
                     customer_id = await cl.Message(content=f"#### Customer Data:\n```json\n{json.dumps(customer_info, indent=2)}\n```", parent_id=question_id).send()
-                    customer_orders = context["customer_data"].get("orders", [])
+                    customer_orders = context["context"]["customer_data"].get("orders", [])
                     for order in customer_orders:
                         await cl.Message(content=f"## Order {order['id']}\n```json\n{json.dumps(order, indent=2)}\n```", parent_id=customer_id).send()
-                if "citations" in context:
+
                     context_id = await cl.Message(content=f"#### Citations:\n", parent_id=question_id).send()
-                    for item in context["citations"]:
+                    for item in context["context"]["citations"]:
                         await cl.Message(content=f"##{item['content']}", parent_id=context_id).send()
+                if "query_rewrite" in context:
+                    await cl.Message(content=f"#### Query Rewrite:\n{context['query_rewrite']}", parent_id=question_id).send()
 
     await cl.Message(content=f"#### Download as testcase:\n```json\n{json.dumps(test_case)}\n```", parent_id=question_id).send()
 
@@ -128,15 +130,13 @@ async def call_eval(command: str, command_id: str):
         await cl.Message(content=f"#### No messages to evaluate").send()
         return
     
-    chat_app = PromptFlowChat(prompt_flow=config["promptflow_folder"])
+    chat_app = PromptFlowChat(prompt_flow=config["promptflow"])
     chat_history = chat_app._chat_history_to_pf(messages[:-2])
     question = messages[-2]["content"]
     answer = messages[-1]["content"]
-    customer_data = messages[-1]["context"]["customer_data"]
-    citations = messages[-1]["context"]["citations"]
-    context = json.dumps({"customerData": customer_data, "citations": citations})
+    context = messages[-1]["context"]["context"]
     cli = pf.PFClient()
-    result = await cl.make_async(cli.test)(config["eval_flow_folder"], inputs=dict(
+    result = await cl.make_async(cli.test)(config["evalflow"], inputs=dict(
         chat_history=chat_history,
         question=question,
         answer=answer,
@@ -160,7 +160,7 @@ async def list_tests(command: str, command_id: str):
 
 async def run_test(command: str, command_id: str):
     config = cl.user_session.get("config")
-    chat_app = PromptFlowChat(prompt_flow=config["promptflow_folder"])
+    chat_app = PromptFlowChat(prompt_flow=config["promptflow"])
     # parse the test number from the command
     # read the test set
     with open(config["test_set"]) as f:

@@ -44,9 +44,6 @@ outputs:
   context:
     type: object
     reference: ${context.output}
-  query_rewrite:
-    type: string
-    reference: ${rewrite_query.output}
 nodes:
 - name: question_embedding
   type: python
@@ -56,7 +53,7 @@ nodes:
   inputs:
     connection: contoso-aoai-connection
     deployment_name: text-embedding-ada-002
-    input: ${rewrite_query.output}
+    input: ${inputs.question}
   use_variants: false
 - name: customer_lookup
   type: python
@@ -109,14 +106,3 @@ nodes:
   inputs:
     citations: ${retrieve_support_documentation.output}
     customer_data: ${customer_lookup.output}
-- name: rewrite_query
-  type: python
-  source:
-    type: code
-    path: rewrite_query.py
-  inputs:
-    query: ${inputs.question}
-    chat_history: ${inputs.chat_history}
-    customer_data: ${customer_lookup.output}
-    azure_open_ai_connection: contoso-aoai-connection
-    open_ai_deployment: gpt-35-turbo

@@ -104,6 +104,11 @@
           "type": [
             "string"
           ]
+        },
+        "date": {
+          "type": [
+            "string"
+          ]
         }
       },
       "source": "customer_prompt.jinja2"
@@ -172,39 +177,6 @@
       },
       "source": "context.py",
       "function": "context"
-    },
-    "rewrite_query.py": {
-      "type": "python",
-      "inputs": {
-        "query": {
-          "type": [
-            "string"
-          ]
-        },
-        "chat_history": {
-          "type": [
-            "object"
-          ]
-        },
-        "customer_data": {
-          "type": [
-            "object"
-          ]
-        },
-        "azure_open_ai_connection": {
-          "type": [
-            "AzureOpenAIConnection"
-          ]
-        },
-        "open_ai_deployment": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "description": "rewrite the query based on the chat history and customer data",
-      "source": "rewrite_query.py",
-      "function": "rewrite_query"
     }
   }
 }

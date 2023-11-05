@@ -5,46 +5,49 @@ environment:
 inputs:
   chat_history:
     type: list
-    default:
-    - inputs:
-        question: Which is your cheapest tent?
-      outputs:
-        answer: Our cheapest tent is the SkyView 2-Person Tent, priced at $200. It
-          offers spacious interior, durable and waterproof materials, easy
-          setup, and other convenient features. Let me know if you have any
-          other questions!
+    default: []
   question:
     type: string
-    default: How much does it weigh?
+    default: what is the temperature rating of my sleeping bag?
   context:
     type: string
-    default: |
-      # Information about product item_number: 1
-      TrailMaster X4 Tent, price $250,
+    default: 
+      customer_data: 
+      - "id": "7"
+        "firstName": "Jason"
+        "lastName": "Brown"
+        "age": 50
+        "email": "jasonbrown@example.com"
+        "phone": "555-222-3333"
+        "address": "456 Cedar Rd, Anytown USA, 12345"
+        "membership": "Base"
+        "orders": 
+        - "id": 27
+          "productId": 7
+          "quantity": 2
+          "total": 200.0
+          "date": "3/10/2023"
+          "name": "CozyNights Sleeping Bag"
+          "unitprice": 100.0
+          "category": "Sleeping Bags"
+          "brand": "CozyNights" 
+      citations:
+      - |
+        Information about product item_number: 14
+        MountainDream Sleeping Bag, price $130,
 
-      ## Brand
-      OutdoorLiving
+        Rating: 5
+        Review: I've used the MountainDream Sleeping Bag on multiple camping trips, and it has never disappointed me. The insulation is fantastic, providing excellent warmth even in chilly weather. The fabric feels durable, and the zippers glide smoothly. The included stuff sack makes it convenient to pack and carry. Highly satisfied with my purchase!
 
-      ## Category
-      Tents
+        Rating: 4
+        Review: The MountainDream Sleeping Bag is a solid choice for backpacking and camping. It's lightweight and compact, making it easy to fit into my backpack. The insulation kept me warm during cold nights, and the hood design provided extra comfort. The only downside is that it's a bit snug for taller individuals. Overall, a reliable sleeping bag for outdoor adventures.
 
-      ## Features
-      - Polyester material for durability
-      - Spacious interior to accommodate multiple people
-      - Easy setup with included instructions
-      - Water-resistant construction to withstand light rain
-      - Mesh panels for ventilation and insect protection
-      - Rainfly included for added weather protection
-      - Multiple doors for convenient entry and exit
-      - Interior pockets for organizing small items
-      - Reflective guy lines for improved visibility at night
-      - Freestanding design for easy setup and relocation
-      - Carry bag included for convenient storage and transportation
+        FAQ
+
+        What is the temperature rating for the MountainDream Sleeping Bag? The MountainDream Sleeping Bag is rated for temperatures as low as 15�F (-9�C), making it suitable for 4-season use.
   answer:
     type: string
-    default: I apologize for the confusion, but I don't have information about the
-      weight of the SkyView 2-Person Tent. Is there anything else I can assist
-      you with?
+    default: The CozyNights Sleeping Bag is rated for temperatures as low as 15F (-9C), making it suitable for 4-season use.
 outputs:
   gpt_coherence:
     type: object

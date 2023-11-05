@@ -2,9 +2,7 @@
   "nodes": {
     "question_embedding": {
       "variant_0": {
-        "inputs": {
-          "input": []
-        }
+        "inputs": {}
       }
     },
     "customer_lookup": {
@@ -34,15 +32,6 @@
       "variant_0": {
         "inputs": {
           "citations": [],
-          "customer_data": []
-        }
-      }
-    },
-    "rewrite_query": {
-      "variant_0": {
-        "inputs": {
-          "query": [],
-          "chat_history": [],
           "customer_data": []
         }
       }
