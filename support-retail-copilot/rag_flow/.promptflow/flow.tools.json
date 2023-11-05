@@ -104,6 +104,11 @@
           "type": [
             "string"
           ]
+        },
+        "date": {
+          "type": [
+            "string"
+          ]
         }
       },
       "source": "customer_prompt.jinja2"
@@ -155,6 +160,23 @@
       },
       "source": "retrieve_support_documentation.py",
       "function": "retrieve_documentation"
+    },
+    "context.py": {
+      "type": "python",
+      "inputs": {
+        "citations": {
+          "type": [
+            "object"
+          ]
+        },
+        "customer_data": {
+          "type": [
+            "object"
+          ]
+        }
+      },
+      "source": "context.py",
+      "function": "context"
     }
   }
 }

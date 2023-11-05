@@ -88,20 +88,24 @@ class PromptFlowChat(ChatApp):
                                                     "context": result}})
             return response
 
-    def _chat_history_to_openai(self, chat_history: list) -> list:
+    def _chat_history_to_openai(self, chat_history: list, question:str = None) -> list:
         """
             takes the chat history as produced by prompt flow and formats it for use in the simulator
             promptflow uses the following format:
                 chat_history = [{"inputs":{"question":"What did OpenAI announce on March 2023?"},
                                  "outputs":{"answer":"On March 2023, OpenAI announced the release of GPT-4"}}]
             simulator uses the following format used by openai chat models:
-                [{"role": "human", "content": "What did OpenAI announce on March 2023?"}, 
-                 {"role": "agent", "content": "On March 2023, OpenAI announced the release of GPT-4"}]
+                [{"role": "user", "content": "What did OpenAI announce on March 2023?"}, 
+                 {"role": "assistant", "content": "On March 2023, OpenAI announced the release of GPT-4"}]
+            if a question is provided, then it will be added as the last message in the chat history
+            with role: user
         """
         formatted_chat_history = []
         for i in chat_history:
             formatted_chat_history.append({"role": "user", "content": i["inputs"][self.question]})
             formatted_chat_history.append({"role": "assistant", "content": i["outputs"][self.answer]})
+        if question is not None:
+            formatted_chat_history.append({"role": "user", "content": question})
         return formatted_chat_history
     
     def _chat_history_to_pf(self, chat_history: list) -> list:

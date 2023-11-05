@@ -12,5 +12,7 @@ def customer_lookup(customerId: str, conn: CustomConnection) -> str:
   db = client.get_database_client(conn.configs["databaseId"])
   container = db.get_container_client(conn.configs["containerId"])
   response = container.read_item(item=customerId, partition_key=customerId)
-  response["orders"] = response["orders"][:2]
+  orders = response["orders"]
+  orders = sorted(orders, key=lambda x: x["date"], reverse=True)
+  response["orders"] = orders
   return response

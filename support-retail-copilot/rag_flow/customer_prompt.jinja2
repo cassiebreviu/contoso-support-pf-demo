@@ -18,8 +18,8 @@ and in a personable manner using markdown and even add some personal flair with 
 The following documentation should be used in the response. The response should specifically include the product id.
 ```
 {% for item in documentation %}
-catalog: {{item.id}}
-item: {{item.title}}
+item number: {{item.id}}
+item title: {{item.title}}
 content: {{item.content}}
 {% endfor %}
 ```
@@ -30,10 +30,16 @@ Make sure to reference any documentation used in the response.
 Use their orders as context to the question they are asking.
 ```
 {% for item in customer.orders %}
-name: {{item.name}}
+order number: {{item.id}}
 date: {{item.date}}
+name: {{item.name}}
+item number: {{item.productId}}
+quantity: {{item.quantity}}
+unitprice: {{item.unitprice}}
+total: {{item.total}}
 description: {{item.description}}
 {% endfor %} 
+
 ```
 
 # Customer Context
@@ -45,4 +51,6 @@ The customer's name is {{customer.firstName}} {{customer.lastName}} and is {{cus
 # Instructions
 Reference items that the user has purchased specifically by name and description. Be brief and concise and use appropriate emojis.
 
+# date
+Today's date is {{date}}.
 

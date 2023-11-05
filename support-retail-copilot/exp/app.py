@@ -17,7 +17,7 @@ def start_chat():
         promptflow_folder = "./rag_flow",
         eval_flow_folder = "./eval_flow",
         test_set = "data/testdata.jsonl",
-        customer_id = "6"
+        customer_id = "8"
     )
     cl.user_session.set("config", config)
 
@@ -104,7 +104,11 @@ async def call_chat(question: str, question_id: str, context=None):
                 context = chunk["choices"][0]["delta"]["context"]
                 # add some metadata to help with debugging
                 if "customer_data" in context:
-                    await cl.Message(content=f"#### Customer Data:\n```json\n{json.dumps(context['customer_data'], indent=2)}\n```", parent_id=question_id).send()
+                    customer_info = {k: v for k, v in context["customer_data"].items() if k != "orders" and not k.startswith("_")}
+                    customer_id = await cl.Message(content=f"#### Customer Data:\n```json\n{json.dumps(customer_info, indent=2)}\n```", parent_id=question_id).send()
+                    customer_orders = context["customer_data"].get("orders", [])
+                    for order in customer_orders:
+                        await cl.Message(content=f"## Order {order['id']}\n```json\n{json.dumps(order, indent=2)}\n```", parent_id=customer_id).send()
                 if "citations" in context:
                     context_id = await cl.Message(content=f"#### Citations:\n", parent_id=question_id).send()
                     for item in context["citations"]:
@@ -131,14 +135,6 @@ async def call_eval(command: str, command_id: str):
     customer_data = messages[-1]["context"]["customer_data"]
     citations = messages[-1]["context"]["citations"]
     context = json.dumps({"customerData": customer_data, "citations": citations})
-    print("chat_history")
-    print(chat_history)
-    print("question")
-    print(question)
-    print("answer")
-    print(answer)
-    print("context")
-    print(context)
     cli = pf.PFClient()
     result = await cl.make_async(cli.test)(config["eval_flow_folder"], inputs=dict(
         chat_history=chat_history,

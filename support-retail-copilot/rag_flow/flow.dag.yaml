@@ -39,8 +39,11 @@ outputs:
     type: object
     reference: ${retrieve_support_documentation.output}
   customer_data:
-    type: string
+    type: object
     reference: ${customer_lookup.output}
+  context:
+    type: object
+    reference: ${context.output}
 nodes:
 - name: question_embedding
   type: python
@@ -95,3 +98,11 @@ nodes:
   connection: contoso-aoai-connection
   api: chat
   use_variants: false
+- name: context
+  type: python
+  source:
+    type: code
+    path: context.py
+  inputs:
+    citations: ${retrieve_support_documentation.output}
+    customer_data: ${customer_lookup.output}

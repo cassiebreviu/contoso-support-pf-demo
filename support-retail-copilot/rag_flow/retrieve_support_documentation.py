@@ -16,7 +16,7 @@ def retrieve_documentation(question: str, index_name: str, embedding: List[float
 
   results = search_client.search(
     search_text=question,
-    top=6,
+    top=2,
     search_fields=["content"],
     vectors=[vector],
   )

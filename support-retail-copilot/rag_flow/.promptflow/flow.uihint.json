@@ -27,6 +27,14 @@
           "history": []
         }
       }
+    },
+    "context": {
+      "variant_0": {
+        "inputs": {
+          "citations": [],
+          "customer_data": []
+        }
+      }
     }
   }
 }
