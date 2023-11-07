@@ -14,7 +14,9 @@ def start_chat():
     clear_chat_history()
     cl.user_session.set("test_case", None)
     config = dict(
-        promptflow = "./rag_flow",
+        promptflow = "./rag_flow_baseline",
+        promptflow_baseline = "./rag_flow_baseline",
+        promptflow_treatment = "./rag_flow",
         evalflow = "./eval_flow",
         test_set = "data/testdata.jsonl",
         customer_id = "7"
@@ -37,6 +39,7 @@ async def main(message: cl.Message):
 - `/config` - show the current configuration
 - `/config <name> <value>` - set the configuration value
 - `/clear` - clear the chat history
+- `/activate <baseline|treatment>` - set the promptflow to baseline or treatment
 - `/help` - show this help message
 - anything else - continue the conversation
 """
@@ -45,7 +48,7 @@ async def main(message: cl.Message):
         await config(question, question_id)
     elif question.startswith("/eval"):
         await call_eval(question, question_id)
-    elif question.startswith("/add_test"):
+    elif question == "/add_test":
         await add_test(question, question_id)
     elif question =="/help":
         await cl.Message(content=help_text).send()
@@ -54,10 +57,30 @@ async def main(message: cl.Message):
         await cl.Message(content="#### Chat history cleared").send()
     elif question.startswith("/test"):
         await run_test(question, question_id)
-    elif question.startswith("/list_tests"):
+    elif question.startswith("/activate"):
+        await activate_promptflow(question, question_id)
+    elif question == "/list_tests":
         await list_tests(question, question_id)
+    elif question.startswith("/"):
+        await cl.Message(content=f"#### Unknown command `{question}`\n{help_text}").send()
     else:
         await call_chat(question, question_id)
+
+async def activate_promptflow(command: str, command_id: str):
+    config = cl.user_session.get("config")
+    if len(command.split(" ")) < 2:
+        await cl.Message(content=f"#### Promptflow is currently set to `{config['promptflow']}`").send()
+        return
+    promptflow = command.split(" ")[1]
+    if promptflow in ["baseline","control"]:
+        config["promptflow"] = config["promptflow_baseline"]
+    elif promptflow == "treatment":
+        config["promptflow"] = config["promptflow_treatment"]
+    else:
+        await cl.Message(content=f"#### Unknown promptflow `{promptflow}`").send()
+        return
+    await cl.Message(content=f"#### Set promptflow to `{config['promptflow']}`").send()
+
 
 async def config(command: str, command_id: str):
     config = cl.user_session.get("config")
