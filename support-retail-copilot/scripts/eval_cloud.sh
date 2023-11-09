@@ -10,10 +10,17 @@ if [ "$current_dir" != "support-retail-copilot" ]; then
     exit 1
 fi
 
-# create a name for the run
-run_name=run_$(date +%Y%m%d_%H%M%S)
+# create a name for the run if no command line parameter was given
+if [ -z "$1" ]; then
+    run_name=run_$(date +%Y%m%d_%H%M%S)
+else
+    run_name=$1
+fi
+
+run_name_eval="${run_name}_eval"
 echo "run name: $run_name"
+echo "eval name: $run_name_eval"
 # create the run
 pfazure run create -f scripts/yaml/rag_job.yaml --name $run_name --stream
 # evaluate the run
-pfazure run create -f scripts/yaml/eval_job.yaml --run $run_name --stream --name experiment_eval_4
+pfazure run create -f scripts/yaml/eval_job.yaml --run $run_name --stream --name $run_name_eval

@@ -1,7 +1,7 @@
 {
     "jupyter.debugJustMyCode": false,
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.autopep8"
     },
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
